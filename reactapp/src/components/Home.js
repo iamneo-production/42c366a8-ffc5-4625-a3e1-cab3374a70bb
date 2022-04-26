@@ -23,7 +23,7 @@ class Home extends Component {
         this.getCart();
     }
     getData(){
-        fetch("http://localhost:8080/product/getAll").then((response)=>{
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/product/getAll").then((response)=>{
          response.json().then((result)=>{
          this.setState({list:result})
 })
@@ -31,7 +31,7 @@ class Home extends Component {
     }
 
     getCart(){
-        fetch("http://localhost:8080/cart/getAll/" + localStorage.getItem('login')).then((response) => {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/cart/getAll/" + localStorage.getItem('login')).then((response) => {
             response.json().then((result) => {
                 this.setState({ cart: result })
             })
@@ -50,7 +50,7 @@ class Home extends Component {
           }
             })
             if(alreadyInCart){
-                fetch("http://localhost:8080/cart/"+cartid, {
+                fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/cart/"+cartid, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
@@ -74,7 +74,7 @@ class Home extends Component {
                 }
             else{
 
-               fetch("http://localhost:8080/cart/add", {
+               fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/cart/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

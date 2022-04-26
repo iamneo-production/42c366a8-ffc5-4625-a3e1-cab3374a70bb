@@ -18,14 +18,14 @@ class Myorders extends Component {
     }
 
     getData() {
-        fetch("http://localhost:8080/orders/getAll/" + localStorage.getItem('login')).then((response) => {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/orders/getAll/" + localStorage.getItem('login')).then((response) => {
             response.json().then((result) => {
                 this.setState({ list: result })
             })
         })
     }
     delete(id) {
-        fetch("http://localhost:8080/orders/" + id, {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/orders/" + id, {
             method: "DELETE",
         }).then(() => {
             this.getData();

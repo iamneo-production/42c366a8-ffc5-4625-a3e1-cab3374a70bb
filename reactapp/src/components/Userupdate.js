@@ -17,7 +17,7 @@ var d=parseInt(s.replace(/\D/g, ""));
   });
 
   React.useEffect(() => {
-    fetch("http://localhost:8080/user/"+d).then((response)=>{
+    fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/user/"+d).then((response)=>{
         response.json().then((result)=>{
             
 setState({
@@ -33,7 +33,7 @@ setState({
   }, []);
 
   const handleUpdate=()=>{
-    fetch("http://localhost:8080/user/"+d, {
+    fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/user/"+d, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"

@@ -11,7 +11,7 @@ const Adminreview = () => {
     const [Allreview, setAllreview] = useState({fetchreviews : ""});
 
     useEffect(() => {
-        fetch("http://localhost:8080/product/"+id).then((response)=>{
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/product/"+id).then((response)=>{
             response.json().then((result)=>{
                 setState({list:result});       
         })
@@ -28,7 +28,7 @@ const Adminreview = () => {
       
 
       const getAllreviewdata = () => {
-        fetch("http://localhost:8080/get").then((response)=>{
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/get").then((response)=>{
           response.json().then((res)=>{
             setAllreview({fetchreviews:res})
 

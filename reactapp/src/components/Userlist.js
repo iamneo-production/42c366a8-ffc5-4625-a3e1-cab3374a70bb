@@ -16,14 +16,14 @@ class Userlist extends Component {
         this.getData();
     }
     getData(){
-        fetch("http://localhost:8080/user/getAll").then((response)=>{
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/user/getAll").then((response)=>{
          response.json().then((result)=>{
          this.setState({list:result})
 })
         })
     }
     delete(id){
-        fetch("http://localhost:8080/user/"+id, {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/user/"+id, {
             method: "DELETE",
         }).then(() => {
             alert("User deleted successfully");

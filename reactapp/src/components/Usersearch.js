@@ -11,7 +11,7 @@ class Usersearch extends Component {
         }
     }
     search(key){
-        fetch("http://localhost:3000/user?q="+key).then((data)=>{
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/user?q="+key).then((data)=>{
             data.json().then((response)=>{
                 if(response.length>0)
                 {

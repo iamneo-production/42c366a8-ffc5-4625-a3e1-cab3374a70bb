@@ -15,7 +15,7 @@ class Order extends Component {
     }
 
     getData() {
-        fetch("http://localhost:8080/orders/getAll").then((response) => {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/orders/getAll").then((response) => {
             response.json().then((result) => {
                 this.setState({ list: result })
             })

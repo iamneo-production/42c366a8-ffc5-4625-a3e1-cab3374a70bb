@@ -76,7 +76,7 @@ class Addproduct extends Component {
     }
 
     addProduct(){
-        fetch("http://localhost:8080/product/add", {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/product/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
