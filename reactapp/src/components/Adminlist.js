@@ -17,14 +17,14 @@ class Adminlist extends Component {
         this.getData();
     }
     getData(){
-        fetch("http://localhost:8080/product/getAll").then((response)=>{
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/product/getAll").then((response)=>{
          response.json().then((result)=>{
          this.setState({list:result})
 })
         })
     }
     delete(id){
-        fetch("http://localhost:8080/product/"+id, {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/product/"+id, {
             method: "DELETE",
         }).then(() => {
             

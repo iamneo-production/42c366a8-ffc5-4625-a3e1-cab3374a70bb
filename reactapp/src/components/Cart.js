@@ -18,7 +18,7 @@ class Cart extends Component {
     }
 
     getData() {
-        fetch("http://localhost:8080/cart/getAll/" + localStorage.getItem('login')).then((response) => {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/cart/getAll/" + localStorage.getItem('login')).then((response) => {
             response.json().then((result) => {
                 this.setState({ list: result })
             })
@@ -26,7 +26,7 @@ class Cart extends Component {
     }
 
     delete(id) {
-        fetch("http://localhost:8080/cart/" + id, {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/cart/" + id, {
             method: "DELETE",
         }).then(() => {
             this.getData();

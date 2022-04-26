@@ -115,7 +115,7 @@ class Usercreate extends Component {
     }
 
     create() {
-        fetch("http://localhost:8080/user/add", {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/user/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

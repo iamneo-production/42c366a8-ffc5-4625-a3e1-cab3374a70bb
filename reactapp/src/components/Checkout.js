@@ -19,7 +19,7 @@ class Checkout extends Component {
 
     }
     getData() {
-        fetch("http://localhost:8080/cart/getAll/" + localStorage.getItem('login')).then((response) => {
+        fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/cart/getAll/" + localStorage.getItem('login')).then((response) => {
             response.json().then((result) => {
                 this.setState({ list: result })
             })
@@ -33,7 +33,7 @@ class Checkout extends Component {
     order(){
         let orderid= (Math.random() + 1).toString(36).substring(7);
         this.state.list.forEach(x=>{
-            fetch("http://localhost:8080/orders/add", {
+            fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/orders/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -53,7 +53,7 @@ class Checkout extends Component {
               })
 
               this.state.list.forEach(x=>{
-                fetch("http://localhost:8080/cart/" + x.id, {
+                fetch("https://8080-eedcfcabedcfddaaebecafccddbebaee.examlyiopb.examly.io/cart/" + x.id, {
                     method: "DELETE",
                 })
               })
